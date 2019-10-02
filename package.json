@@ -1,0 +1,29 @@
+{
+  "name": "package-labeler",
+  "version": "0.0.0",
+  "description": "Github action to dynamically label pull requests affecting packages in a monorepo / workspace",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csi-lk/package-labeler.git"
+  },
+  "keywords": [
+    "package",
+    "labeler",
+    "monorepo",
+    "workspace",
+    "pull",
+    "request",
+    "github",
+    "actions"
+  ],
+  "author": "Callum Silcock <github@csi.lk> (http://www.csi.lk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csi-lk/package-labeler/issues"
+  },
+  "homepage": "https://github.com/csi-lk/package-labeler#readme"
+}
