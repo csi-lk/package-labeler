@@ -2,9 +2,11 @@
   "name": "package-labeler",
   "version": "0.0.0",
   "description": "Github action to dynamically label pull requests affecting packages in a monorepo / workspace",
-  "main": "dist/index.js",
+  "main": "dist/package-labeler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write **/*.ts",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,13 @@
   "bugs": {
     "url": "https://github.com/csi-lk/package-labeler/issues"
   },
-  "homepage": "https://github.com/csi-lk/package-labeler#readme"
+  "homepage": "https://github.com/csi-lk/package-labeler#readme",
+  "dependencies": {
+    "@actions/core": "^1.1.3",
+    "@actions/github": "^1.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.3"
+  }
 }
