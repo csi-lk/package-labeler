@@ -1,4 +1,5 @@
 {
+  "files": ["src/package-labeler.ts"],
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
@@ -9,12 +10,11 @@
     "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
     "pretty": true
-  },
-  "exclude": ["node_modules", "**/*.test.ts"]
+  }
 }
