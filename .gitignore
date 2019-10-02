@@ -1,0 +1,100 @@
+# csilk Gitignore default #
+###########################
+
+.env
+
+# Editors #
+###########
+.vscode
+.idea
+*.iml
+.project
+.gradle/
+/nbproject/private/
+
+# Compiled source #
+###################
+
+dist
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+.vs
+*.msi
+*.nupkg
+
+# Logs and databases #
+######################
+
+*.log
+*.sql
+*.sqlite
+npm-debug.log*
+coverage
+junit.xml
+
+# Caches #
+##########
+
+.eslintcache
+eslint-data
+/tmp/
+/.cache-loader
+
+# Node #
+########
+
+lib-cov
+*.seed
+*.log
+*.dat
+*.out
+*.pid
+*.gz
+pids
+logs
+npm-debug.log
+node_modules/
+.pnp.js
+.pnp
+.yarn-meta
+/packages/lockfile/index.js
+/.nyc_output
+.npmrc
+
+# OS generated files #
+######################
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+debug.log
+.settings
+.settings/*
+.buildpath
+*.iml
+sftp-config*
+*.sublime-*
+
+# Reports #
+######################
+coverage
