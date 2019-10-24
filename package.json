@@ -1,6 +1,6 @@
 {
   "name": "package-labeler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Github action to dynamically label pull requests affecting packages in a monorepo / workspace",
   "main": "dist/package-labeler.js",
   "scripts": {
