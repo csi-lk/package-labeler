@@ -2,8 +2,6 @@
 
 > Github action to dynamically label pull requests affecting packages in a monorepo / workspace
 
-_This is currently work in progress and should not be used in production yet_
-
 ## Usage
 
 ```yml
@@ -35,6 +33,12 @@ packages/
 ```
 
 And I make a code change to `core.js` the PR will be labelled with `pkg: core`
+
+## Example
+
+https://github.com/csi-lk/test-labeler/pull/1
+
+You can see the changed files and how the `github-actions` bot as added the labels to the PR
 
 ---
 
