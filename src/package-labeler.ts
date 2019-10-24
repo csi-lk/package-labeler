@@ -6,7 +6,9 @@ async function run() {
   try {
     const token = getInput("repo-token", { required: true })
     const workspace = getInput("workspace", { required: true })
+    debug(`workspace: ${workspace}`)
     const prefix = getInput("prefix", { required: false })
+    debug(`prefix: ${prefix}`)
     const pullRequest = github.context.payload.pull_request
     if (!pullRequest) {
       error("could not find pull request number")
@@ -17,12 +19,16 @@ async function run() {
     const client = new github.GitHub(token)
     debug(`fetching changed files for pr #${prNumber}`)
     const changedFiles: string[] = await getChangedFiles(client, prNumber)
+    console.log(changedFiles)
     const subDirs = (workspace.match(/\//g) || []).length
     const labels: string[] = multimatch(changedFiles, [
-      `./${workspace}/**/*`
-    ]).map(dir => `${prefix}${dir.split("/")[2 + subDirs]}`)
+      `${workspace}/**/*`
+    ]).map(dir => `${prefix}${dir.split("/")[1 + subDirs]}`)
+
     if (labels.length > 0) {
       await addLabels(client, prNumber, labels)
+    } else {
+      debug("no labels to add")
     }
   } catch (err) {
     error(err)
@@ -55,6 +61,8 @@ async function addLabels(
   prNumber: number,
   labels: string[]
 ) {
+  debug(`labels to add: ${labels}`)
+
   await client.issues.addLabels({
     owner: github.context.repo.owner,
     repo: github.context.repo.repo,
