@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/csi-lk/package-labeler#readme",
   "dependencies": {
-    "@actions/core": "^1.1.3",
+    "@actions/core": "^1.9.1",
     "@actions/github": "^1.1.0",
     "multimatch": "^4.0.0"
   },
