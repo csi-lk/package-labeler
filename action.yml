@@ -1,8 +1,9 @@
 name: "Pull Request Package Labeler"
 description: "Dynamically label pull requests affecting packages in a monorepo / workspace"
 author: "Callum Silcock <github@csi.lk> (http://www.csi.lk)"
-icon: "bookmark"
-color: "orange"
+branding:
+  icon: "bookmark"
+  color: "orange"
 inputs:
   repo-token:
     description: "The GITHUB_TOKEN secret"
@@ -13,5 +14,5 @@ inputs:
     description: "The prefix to use for the labels"
     default: "pkg: "
 runs:
-  using: "node12"
+  using: "node16"
   main: "dist/package-labeler.js"
